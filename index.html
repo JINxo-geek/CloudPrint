@@ -3,16 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>云打印</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<link rel="stylesheet" type="text/css" href="http://oys4t2c6g.bkt.clouddn.com/main.css">
 
 
-      <link rel="stylesheet" href="css/normalize.min.css">
+      <link rel="stylesheet" href="http://oys4t2c6g.bkt.clouddn.com/normalize.min.css">
       <script src="http://oys4t2c6g.bkt.clouddn.com/jquery-3.2.1.min.js">
-      </script><script src="clipboard.min.js"></script>
-    <link rel="stylesheet" href="css/modal.css"/>
+      </script><script src="http://oys4t2c6g.bkt.clouddn.com/clipboard.min.js"></script>
+    <link rel="stylesheet" href="http://oys4t2c6g.bkt.clouddn.com/modal.css"/>
 
 
-<script src="js/modal.js" type="text/javascript"></script>
+<script src="http://oys4t2c6g.bkt.clouddn.com/modal.js" type="text/javascript"></script>
 </head>
 <body>
 		<div class="dropzone" style="position: absolute;z-index: 98">
@@ -123,8 +124,8 @@
 
 
 
-<script src="js/eye.js"></script>
-<script src="js/func.js"></script>
+<script src="http://oys4t2c6g.bkt.clouddn.com/eye.js"></script>
+<script src="http://oys4t2c6g.bkt.clouddn.com/func.js"></script>
 <div class="center">
  	<div id="head" style="position: absolute;z-index: 2"></div>
 	<div id="body" class=""></div>
@@ -136,5 +137,24 @@
 <div class="eye" style=";left:120px;"></div></div>
 </div>
 
+	<script>
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+        var browser = navigator.userAgent.toLowerCase();
+
+        var isMobile = false;
+
+        for (var i = 0; i < mobileAgent.length; i++) {
+            if (browser.indexOf(mobileAgent[i]) != -1) {
+                isMobile = true;
+
+
+              document.getElementById("usbbox").style.marginTop="32vh";
+
+}
+}
+
+
+	</script>
 </body>
 </html>
