@@ -143,11 +143,11 @@ code {
 #drag-box #drag-logo {
 	width: 733px;
 	height: 355px;
-	background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+	background: url("http://oys4t2c6g.bkt.clouddn.com/logo.png") no-repeat scroll 0 0 transparent;
 }
 #drag-box #drag-logo.hover,
 #drag-box #drag-logo:hover {
-	background: url("../img/logo-hover.png") no-repeat scroll 0 0 transparent;
+	background: url("http://oys4t2c6g.bkt.clouddn.com/logo-hover.png") no-repeat scroll 0 0 transparent;
 }
 #progress-outer {
 	width: 640px;
@@ -495,10 +495,10 @@ code {
 	#drag-box #drag-logo {
 		width: 291px;
 		height: 291px;
-		background: url("../img/logo-hero.png") no-repeat scroll -222px -32px transparent;
+		background: url("http://oys4t2c6g.bkt.clouddn.com/logo-hero.png") no-repeat scroll -222px -32px transparent;
 	}
 	#drag-box #drag-logo:hover {
-		background: url("../img/logo-hero-hover.png") no-repeat scroll -222px -32px transparent;
+		background: url("http://oys4t2c6g.bkt.clouddn.com/logo-hero-hover.png") no-repeat scroll -222px -32px transparent;
 	}
 	#progress-outer {
 		width: 376px;
@@ -542,7 +542,7 @@ border-bottom-right-radius:15px;
 	left:91px;
 width: 123px;
 height: 84px;
-background-image: url(../image/head.png);
+background-image: url(http://oys4t2c6g.bkt.clouddn.com/head.png);
 }
 
 .uploadhand{
@@ -555,7 +555,7 @@ background-image: url(../image/head.png);
 #body{
 background-position:-27px -23px;
 position: absolute;z-index: 2;
-background-image:url(../image/body.png);
+background-image:url(http://oys4t2c6g.bkt.clouddn.com/body.png);
 
  border-radius: 40px;
 
@@ -619,7 +619,7 @@ width: 300px;
 
 }
 .is-dragover-mouth{
-	background-image: url(../image/mouth.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/mouth.png);
 	position: absolute;
 border-radius: 10px;
 
@@ -927,8 +927,8 @@ top: 56%;
 100% {top:86px;}
 }
 .uploadedh {
- -webkit-animation:uploadedh 2s;
-  animation:uploadedh 2s;
+ -webkit-animation:uploadedh 1s;
+  animation:uploadedh 1s;
  -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 
@@ -1006,6 +1006,77 @@ top: 56%;
   }
 }
 
+@keyframes eyered{
+
+  0%, 100% {
+background-color:red;
+box-shadow: #ff0101 0px 0px 35px 0px;
+  }
+  25% {
+background-color:red;
+box-shadow: #ff0101 0px 0px 60px 0px;
+
+  }
+  30% {
+background-color:red;
+  }
+  50% {
+    opacity: 1;
+
+   box-shadow: #ff0101 0px 0px 60px 0px;
+  }
+  60% {
+
+  }
+  70% {
+  	box-shadow: #ff0101 0px 0px 35px 0px;
+
+  }
+  80% {
+
+    box-shadow: #ff0101 0px 0px 35px 0px;
+  }
+}
 
 
 
+}
+@-webkit-keyframes eyered{
+
+  0%, 100% {
+background-color:red;
+box-shadow: #ff0101 0px 0px 35px 0px;
+  }
+  25% {
+background-color:red;
+box-shadow: #ff0101 0px 0px 60px 0px;
+
+  }
+  30% {
+background-color:red;
+  }
+  50% {
+    opacity: 1;
+
+   box-shadow: #ff0101 0px 0px 60px 0px;
+  }
+  60% {
+
+  }
+  70% {
+  	box-shadow: #ff0101 0px 0px 35px 0px;
+
+  }
+  80% {
+
+    box-shadow: #ff0101 0px 0px 35px 0px;
+  }
+}
+
+.eyered {
+ -webkit-animation:eyered 1s;
+  animation:eyered 1s;
+ -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+
+}

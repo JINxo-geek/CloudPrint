@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 body{
-	background-image: url(bg.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/bg.png);
 	background-repeat: repeat-x;
 	background-size: auto 100vh;
 }
@@ -33,7 +33,7 @@ body{
 #logo{	width: 109px;
 	height: 37px;
 	background-position: 10px 10px;
-	background-image: url(logo.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/logo.png);
 	background-repeat: no-repeat;
 
 }
@@ -41,7 +41,7 @@ body{
 display: none;
 	    width: 499px;
     height: 408px;
-    background-image: url(alert.png);
+    background-image: url(http://oys4t2c6g.bkt.clouddn.com/alert.png);
     background-repeat: no-repeat;
     border-radius: 10px;
     padding-top: 150px;
@@ -63,7 +63,7 @@ display: none;
  display: none;
 	    width: 499px;
     height: 408px;
-    background-image: url(alert.png);
+    background-image: url(http://oys4t2c6g.bkt.clouddn.com/alert.png);
     background-repeat: no-repeat;
     border-radius: 10px;
     padding-top: 150px;
@@ -86,7 +86,7 @@ display: none;
 	display: none;
 	width: 319px;
 	height: 408px;
-	background-image: url(mesbox.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/mesbox.png);
 	background-repeat: no-repeat;
 	border-radius: 10px;
 	padding-top: 150px;
@@ -115,7 +115,7 @@ display: none;
 }
 #usbbox:hover #usb{
 
-	background-image: url(eye1.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/eye1.png);
 	box-shadow: 0px 25px 35px 0px rgba(7, 0, 2, 0.1);
 }
 #usb{
@@ -123,7 +123,7 @@ display: none;
 	width: 300px;
 	height: 400px;
 	background-color: white;
-	background-image: url(eye.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/eye.png);
 	background-repeat: no-repeat;
 	border-radius: 40px;
 	box-shadow: 0px 6px 35px 0px rgba(7, 0, 2, 0.1);
@@ -152,19 +152,19 @@ display: none;
 }
 #cirright{
 	margin-left: 10px;
-	background-image: url(cirright.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/cirright.png);
 }
 #cirleft{
-	background-image: url(cirleft.png);
+	background-image: url(http://oys4t2c6g.bkt.clouddn.com/cirleft.png);
 }
-.circle:hover{
-	position: relative;
-	border-radius: 10px;
-	width: 200px;
-	height: 162px;
-	font-size: 16px;
-	color: #0ec4fb;
-	padding: 10px;
+.circle:hover {
+    position: relative;
+    border-radius: 10px;
+    width: 200px;
+    height: 278px;
+    font-size: 16px;
+    color: #0ec4fb;
+    padding: 10px;
 }
 #cirright:hover,#cirleft:hover{
 	background: none;
@@ -195,7 +195,7 @@ display: none;
 }
 
 .tip{
-background-image: url(tip.png);
+background-image: url(http://oys4t2c6g.bkt.clouddn.com/tip.png);
 }
 body{
              -moz-user-select:none; /*火狐*/

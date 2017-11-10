@@ -7,11 +7,8 @@
 
 
       <link rel="stylesheet" href="css/normalize.min.css">
-      <script src="http://oys4t2c6g.bkt.clouddn.com/jquery-3.2.1.min.js"></script>
-		<style>
-
-
-</style>
+      <script src="http://oys4t2c6g.bkt.clouddn.com/jquery-3.2.1.min.js">
+      </script><script src="clipboard.min.js"></script>
     <link rel="stylesheet" href="css/modal.css"/>
 
 
@@ -21,8 +18,8 @@
 		<div class="dropzone" style="position: absolute;z-index: 98">
 	<div class="content tip">
 	<div id="mouth">
-<div class="teeth" style="visibility: hidden;margin-right:3px;"><img src="image/teeth.png" alt=""></div>
-<div class="teeth" style="visibility: hidden;margin-left:3px;"><img src="image/teeth.png" alt=""></div>
+<div class="teeth" style="visibility: hidden;margin-right:3px;"><img src="http://oys4t2c6g.bkt.clouddn.com/teeth.png" alt=""></div>
+<div class="teeth" style="visibility: hidden;margin-left:3px;"><img src="http://oys4t2c6g.bkt.clouddn.com/teeth.png" alt=""></div>
 	</div>
 
 
@@ -44,7 +41,11 @@
 		<div id="mesbox">
 	<p style="    width: 216px;margin: 0;
     font-size: 23px;""><b id="filename">index.html</b>的提取码为：</p>
-			<h2 id="password">AB1C2D</h2>
+			<h2 id="password" data-clipboard-text="none">AB1C2D</h2>
+			<p id="clip" style="    width: 180px;
+    font-size: 20px;
+    margin-top: 17px;
+    text-align: center;">tip:点击提取码可以复制到粘贴板</p>
 		</div>
 	</div>
 	<div id="mid">
@@ -63,16 +64,16 @@
 				<div class="style-left" style="    position: relative;
     width: 400px;
     text-align: center;right: 41px;">
-				<p class="footer-intro">&copy; 2000-2017 新思路实验室GEEK组</p>
+				<p class="footer-intro">&copy; 2017 新思路实验室GEEK组</p>
 			</div>
 	</div>
 	<div id="right">
 		<div id="rightbox">
 			<div class="circle" id="cirleft">
-<b>开发者：</b><br>论文?试题?策划案?图片?高效传输文件,免费的方便人们到打印店打印和转移文件的网络产品。用户无需注册,在这上传文件,得到文件提取码， 到打印店报提取码即可打印。
+<b>功能介绍：</b><br>论文?试题?策划案?图片?<br><br>高效传输文件,免费的方便<br><br>人们到打印店打印和转移<br><br>文件的网络产品。用户无<br><br>需注册,在这上传文件,得<br><br>到文件提取码， 到打印<br><br>店报提取码即可打印。
 			</div>
 			<div class="circle" id="cirright">
-<b>使用方法：</b><br>1.上传文件获得相应的提取码<br>2.输入提取码下载文件
+<b>使用方法：</b><br><br>1.上传文件获得相应的提取码<br><br>2.输入提取码下载文件
 			</div>
 		</div>
 	</div>

@@ -7,6 +7,11 @@ $("#down").click(checkLength);
 
 $("#downyes").click(deletefile);
 $("#downno").click(function(){$("#delete").fadeOut();});
+function eyered(){
+
+$(".eye").addClass("eyered");
+
+}
 function deletefile(){alert("删除成功");$("#delete").fadeOut();}
 
      function checkLength(){
@@ -83,6 +88,8 @@ $("#butup").bind("click", function () {
 
 if(droppedFiles==false&&fileName==""){
   $("#alert").fadeIn(1000,function(){$("#alert").fadeOut(3000);});
+  setTimeout(function(){$(".eye").removeClass("eyered");},3000)
+  eyered();
   return false;
 }
 
@@ -117,11 +124,15 @@ setTimeout(function(){$.ajax({
    $("#alert2").fadeOut(500);
 
           	setTimeout(function(){$("#body").removeClass("breath")},1000);
-          	setTimeout(function(){$("#head").addClass("uploadedh")},1000);
+          	setTimeout(function(){$("#head").addClass("uploadedh")},200);
           	setTimeout(function(){$("#mesbox").fadeIn();},2000);
 setTimeout(function(){$("#butup").html("上传文件");},7000)
 	$('#filename').html(fileName);
 	$("#password").html(data.pass);
+$("#password").attr("data-clipboard-text",data.pass);
+var clipboard = new Clipboard('#password');
+$("#password").click(function(){$("#clip").html("复制成功");
+setTimeout(function(){$("#clip").html("点击提取码可以复制到粘贴板");},3000)});
 	$('.filename').html("");
 	fileName = "";
 	droppedFiles = false;

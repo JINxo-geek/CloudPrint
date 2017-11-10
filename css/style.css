@@ -19,7 +19,7 @@
 }
 
 .center {
-   /*  background-image: url(../image/body.png); */
+
     position: absolute;
     width: 355px;
     height: 467px;
@@ -54,7 +54,7 @@
   overflow: hidden;
 }
 .dropzone.is-dragover {
- background-image: url(../image/eyes.png);
+ background-image: url(http://oys4t2c6g.bkt.clouddn.com/eyes.png);
  width: 200px;
 }
 .dropzone .content {
@@ -100,7 +100,7 @@ left: 420px;
 }
 
 .bar {
-  background-image: url(../image/eyes.png);
+  background-image: url(http://oys4t2c6g.bkt.clouddn.com/eyes.png);
   background-repeat: no-repeat;
     position: relative;
     z-index: 2;

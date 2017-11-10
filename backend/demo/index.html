@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="css/normalize.min.css">
+      <script src="jquery-3.2.1.min.js"></script>
+
+	<style>
+#hand{
+
+/* background-image: url(image/hand.png); */
+top:171px;
+left:300px;
+background: #0ec7ff;
+  display: inline-block;
+  width: 20px;
+  height: 170px;
+  vertical-align: middle;
+/* border-top-left-radius:40px; */
+border-top-right-radius:15px;
+border-bottom-right-radius:15px;
+/* border-bottom-left-radius:40px; */
+
+}
+
+
+#head{
+	left:91px;
+width: 123px;
+height: 84px;
+background-image: url(image/head.png);
+}
+
+.uploadhand{
+
+}
+.uploadhead{
+
+}
+
+#body{
+background-position:-27px -23px;
+position: absolute;z-index: 2;
+background-image:url(image/body.png);
+/* opacity: 0.302; */
+ border-radius: 40px;
+/*   background: #FFFFFF; */
+  box-shadow: 0 40px 35px 0px rgba(7, 0, 2, 0.38);
+  width: 300px;
+  height: 400px;
+
+}
+
+
+.body{
+
+  /* opacity: 0.4; */
+  width: 1920px;
+  height: 70%;
+}
+
+
+
+.frame {
+
+
+  background: #9de5fb;
+ /*  opacity: 0.4; */
+  width: 1920px;
+  height: 710px;
+
+
+
+}
+
+.center {
+   /*  background-image: url(../image/body.png); */
+    position: absolute;
+    width: 355px;
+    height: 467px;
+    top: 34%;
+    left: 38%;
+
+
+}
+
+.title {
+  font-size: 16px;
+  color: #676767;
+  line-height: 50px;
+  height: 50px;
+/*   border-bottom: 1px solid #D8D8D8; */
+  text-align: center;
+}
+
+.dropzone {
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  display: table;
+  table-layout: fixed;
+width: 300px;
+    height: 400px;
+    top: 0px;
+    left: 0px;
+  border: 1px dashed #A4A4A4;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+}
+.dropzone.is-dragover {
+
+/*   border-radius: 10px;
+background: #2AA1FD;
+width: 165px;
+height: 50px;
+	top:100px;
+	left:100px; */
+width: 300px;
+
+}
+.is-dragover-mouth{
+	background-image: url(image/mouth.png);
+	position: absolute;
+border-radius: 10px;
+/* background: #2AA1FD; */
+    width: 165px;
+    height: 50px;
+    top: 148px;
+    left: 68px;
+/* animation:mouth 0.3; */
+
+
+}
+.teeth{
+
+width: 23px;
+height: 25px;
+/* vertical-align: middle; */
+/*   background: #FFFFFF; */
+
+display: inline-block;
+ line-height: 25px;
+/* box-shadow: 0px 0px 10px rgba(0,0,0,0.8) inset */
+}
+.dropzone .content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.dropzone .upload {
+  margin: 6px 0 0 2px;
+}
+.dropzone .filename {
+  display: block;
+  color: #676767;
+  font-size: 14px;
+  line-height: 18px;
+}
+.dropzone .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.upload-btn {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+left: 420px;
+    bottom: 62px;
+  background: #6ECE3B;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  box-shadow: 0 2px 0 0 #498C25;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.upload-btn:hover {
+  box-shadow: 0 2px 0 0 #498C25, 0 2px 10px 0 #6ECE3B;
+}
+
+.eye{
+
+position: absolute;
+top:1px;
+  border-radius: 2px;
+  background: #299ffb;
+  display: inline-block;
+  width: 80px;
+  height: 10px;
+  vertical-align: middle;
+
+
+}
+
+
+.bar {
+
+  /* background-image: url(image/eyes.png); */
+  background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 13px;
+    top: 87px;
+    left: 56px;
+/*   -webkit-transition: all 3s ease-out;
+transition: all 3s ease-out;
+-webkit-transform: scaleX(0);
+        transform: scaleX(0);
+-webkit-transform-origin: 0 0;
+        transform-origin: 0 0; */
+}
+.bar.active {
+  -webkit-transform: scaleX(1) translate3d(0, 0, 0);
+          transform: scaleX(1) translate3d(0, 0, 0);
+}
+
+.syncing {
+  position: absolute;
+top: 56%;
+    left: 46%;
+  opacity: 0;
+}
+.syncing.active {
+  -webkit-animation: syncing 3.2s ease-in-out;
+          animation: syncing 3.2s ease-in-out;
+}
+
+.done {
+    position: absolute;
+    top: 36%;
+    left: 29%;
+    opacity: 0;
+    width: 138px;}
+
+#header{
+      left: 111px;
+    top: 55px;
+    width: 240px;
+}
+
+@-webkit-keyframes uploading {
+0%   {top:22%;}
+25%  {top:14%;}
+50%  {top:12%;}
+75%  {top:8%;}
+100% {top:5%;}
+}
+
+@-webkit-keyframes syncing {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes syncing {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes done {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes done {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadein{
+
+    animation:fadein 1s;
+  	animation-fill-mode: forwards;//这个可以让动画到100%帧时保存,否则将会回到0%
+}
+.close{
+	animation:close 1s;
+  	animation-fill-mode: forwards;
+}
+
+@keyframes fadein{
+  0%{
+      height:0px;
+  }
+	20%{
+		height: 20px;
+	}
+25%{
+	height: 25px;
+}
+30%{
+	height:32px;
+}45%{
+	height:50px;
+}56%{
+	height:45px;
+}60%{
+	height:50px;
+}
+70%{
+	height:45px;
+}
+80%{
+	height: 40px;
+}
+  100%{
+	height: 50px;
+  }
+}
+
+
+@keyframes close{
+  0%{
+      height:50px;
+  }
+	20%{
+		height: 40px;
+	}
+25%{
+	height: 45px;
+}
+30%{
+	height:32px;
+}45%{
+	height:50px;
+}56%{
+	height:45px;
+}60%{
+	height:50px;
+}
+70%{
+	height:45px;
+}
+80%{
+	height: 20px;
+}
+  100%{
+	height: 0px;
+  }
+}
+
+/* 上传中 */
+.uploading {
+ -webkit-animation:uploading 2s;
+  animation:uploading 2s;
+ -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+
+}
+@-webkit-keyframes uploading {
+ 0%   {top:171px;}
+25%  {top:150px;}
+50%  {top:120px;}
+75%  {top:100px;}
+100% {top:104px;}
+}
+/* 上传完毕 */
+
+.uploaded {
+ -webkit-animation:uploaded .5s ease-in 3.2s;
+  animation:uploaded .5s ease-in 3.2s;
+ -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+
+}
+@-webkit-keyframes uploaded {
+0%   {top:171px;}
+25%  {top:150px;}
+50%  {top:120px;}
+75%  {top:100px;}
+100% {top:86px;}
+}
+/* 呼吸 */
+.breath{webkit-animation: pulse 2s cubic-bezier(0.66, 0.15, 0.83, 0.67) infinite;
+          animation: pulse 2s cubic-bezier(0.66, 0.15, 0.83, 0.67)infinite;
+}
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  25% {
+    opacity: 1;
+  /* -webkit-transform: scale(0.9);
+             transform: scale(0.9);  尺寸变化*/
+  }
+  30% {
+
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0px 10px 10px rgba(7, 0, 2, 6);
+  }
+  60% {
+
+  }
+  70% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  80% {
+    boxshadow: inh red;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  25% {
+    opacity: 1;
+
+/*     -webkit-transform: scale(0.9);
+        transform: scale(0.9); */
+  }
+  30% {
+
+  }
+  50% {
+    opacity: 1;
+
+    box-shadow: 0 0px 10px 10px rgba(7, 0, 2, 0.6);
+  }
+  60% {
+
+  }
+  70% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  80% {
+    boxshadow: inh red;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<div class="body">
+<form enctype="multipart/form-data" method="get" action="getpri.php" style="position: absolute;">
+<table>
+<tr><td align="center" colspan="2"><font style="font-size:40px;font-family: 华文彩云;">文件上传</font></td></tr>
+<tr><td>请输入密码：</td><td><input type="text" name="pass"/></td></tr>
+<tr><td><input type="submit" value="下载"/></td></tr>
+</table>
+</form>
+<button id="upload" type="button" style="top:0px;position: absolute;">upload</button>
+  <div class="frame">
+
+
+ <div class="center">
+ 	<div id="head" style="position: absolute;z-index: 2"></div>
+	<div id="body" class=""></div>
+
+
+	 <div id="hand" style="position: absolute;z-index: 2;"></div>
+
+		<div class="bar"><div class="eye" style="left: 1px;"></div>
+<div class="eye" style=";left:120px;"></div></div>
+<!-- 		<div class="title">robot</div> -->
+		<div class="dropzone" style="position: absolute;z-index: 9999">
+	<div class="content">
+	<div id="mouth">
+<div class="teeth" style="visibility: hidden;margin-right:-3px;"><img src="image/teeth.png" alt=""></div>
+<div class="teeth" style="visibility: hidden;margin-left:-3px;"><img src="image/teeth.png" alt=""></div>
+	</div>
+	<!--  <img src="image/mouse1.jpg" id="mouse1" class="upload" style="width: 150px;">
+							<img src="image/mouse.jpg" id="mouse" class="upload" style="width: 150px;display: none;"> -->
+		<span class="filename"></span>
+		<form id="form1" >
+					<input type="file" class="input" name="myfile" style="z-index: 10">
+		</form>
+
+
+
+
+	</div>
+	</div>
+
+  </div>
+</div>
+
+</div>
+
+<!-- 		<div class="dropzone">
+	<div class="content">
+		<img src="image/mouse1.jpg" id="mouse1" class="upload" style="width: 150px;">
+						<img src="image/mouse.jpg" id="mouse" class="upload" style="width: 150px;display: none;">
+		<span class="filename"></span>
+		<form id="form1" >
+					<input type="file" class="input" name="myfile" style="z-index: 10">
+		</form>
+	</div>
+	</div> -->
+<!-- <form id="uploadForm" enctype="multipart/form-data">
+    <input id="myfile" type="file" name="file"/>
+
+</form> -->
+
+
+  <script src='jquery-3.2.1.min.js'></script>
+<script type="text/javascript">
+
+
+var droppedFiles = false;
+var fileName = '';
+var $dropzone = $('.dropzone');
+var $button = $('.upload-btn');
+var uploading = false;
+var $syncing = $('.syncing');
+var $done = $('.done');
+var $bar = $('.bar');
+var timeOut;
+var oMyForm;
+$("input:file").change(function (){
+	fileName = $(this)[0].files[0].name;
+	$('.filename').html(fileName);
+	$('.dropzone .upload').hide();
+});
+$dropzone.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+})
+	.on('dragover dragenter', function() {
+	$("#mouth").addClass('is-dragover-mouth');
+	$("#mouth").removeClass("fadeout").addClass("fadein");
+	$('.teeth').css('visibility','inherit');
+
+})
+	.on('dragleave dragend', function() {
+$dropzone.removeClass('is-dragover');
+	$("#mouth").removeClass('is-dragover-mouth');
+	  $("#mouth").removeClass("fadein").addClass("fadeout");
+$('.teeth').css('visibility','hidden');
+})
+	.on('drop', function(e) {
+$("#mouth").removeClass("fadein").addClass("close");
+setTimeout(function(){
+	$('.teeth').css('visibility','hidden');
+},900);
+	/*	$("#mouth").addClass('is-dragover-mouth');*/
+	droppedFiles = e.originalEvent.dataTransfer.files;
+	fileName = droppedFiles[0]['name'];
+	$('.filename').html(fileName);
+	$('.dropzone .upload').hide();
+});
+
+$button.bind('click', function() {
+	startUpload();
+});
+
+$("#upload").bind("click", function () {
+
+
+
+oMyForm = new FormData();
+
+oMyForm.append("myfile",droppedFiles[0])//初始化拖拽的文件获得文件
+
+if(droppedFiles==false){
+	oMyForm = new FormData($("#form1")[0]);//当非拖拽模式上传时,初始化form表单获得文件
+}
+     $.ajax({
+      url: 'http://120.76.140.147/fileupload/uploadpri.php' ,
+          type: 'POST',
+          data: oMyForm,
+          async: false,
+          cache: false,
+          contentType: false,
+          processData: false,
+          beforeSend:function(xhr){
+          	$("#body").addClass("breath")
+          	$("#hand").addClass("uploading")
+        console.log(xhr)
+        console.log('发送前')
+    },
+          success:function(data,textStatus,jqXHR){
+          	setTimeout(function(){$("#body").removeClass("breath")},4000);
+        console.log(data)//返回的参数
+   /*     alert(data);*/
+        console.log(textStatus)//状态
+        console.log(jqXHR)
+    },
+          error:function(xhr,textStatus){
+        console.log('错误')
+        console.log(xhr)
+        console.log(textStatus)
+    },
+complete:function(){
+        console.log('结束')
+    }
+      });
+/*
+if (!uploading && fileName != '' ) {
+		uploading = true;
+		$button.html('Uploading...');
+		$dropzone.fadeOut();
+		$syncing.addClass('active');
+		$("#header").addClass("uploading");
+		$done.addClass('active');
+		$bar.addClass('active');
+		timeoutID = window.setTimeout(showDone, 3200);
+	}*/
+
+});
+/*var xhr = new XMLHttpRequest();
+var fd = new FormData();
+xhr.onreadystatechange=_callback(xhr);
+fd.append('myfile',droppedFiles);
+oMyForm = fd;
+xhr.open('POST',"http://120.76.140.147/fileupload/uploadpri.php",true);
+xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");//设置请求头参数，进行异步请求
+xhr.send(fd);
+function _callback(){
+if(xhr.readyState == 4 && xhr.status == 200){
+                             alert('dd');
+                            alert(xhr.responseText);
+                            }}
+                }
+)*/
+
+
+
+</script>
+<script>
+
+
+
+
+
+//随机眨眼
+
+function r(a,b){
+return a>b?0:Math.round(Math.random()*(b-a)+a);}
+
+
+function timedCount()
+{
+
+
+t=setTimeout("timedCount()",r(4000,10000))
+aniDiv();
+}
+
+
+  function aniDiv(){
+    $(".eye").animate({height:2},"slow");
+    $(".eye").animate({height:13},"slow");
+    $(".eye").animate({height:2},"slow");
+    $(".eye").animate({height:13},"slow");
+  }
+
+$(function(){timedCount();
+
+});
+
+</script>
+<script>
+/*$(function(){//hover中添加两个回调函数
+    $(".dropzone").hover(function(){
+        $(".dropzone").addClass("close");
+    },function(){
+        $(".dropzone").removeClass("fadein").addClass("fadeout");
+    })
+})*/
+</script>
+</body>
+</html>
